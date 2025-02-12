@@ -75,7 +75,7 @@ export default function Cards() {
             </div>
 
             {arrayChecked.length > 0 && (
-                <div className="lg:absolute lg:right-0 w-full lg:w-[30%] rounded-xl p-4 transition-all">
+                <div className="lg:absolute lg:right-0 lg:w-auto rounded-xl px-20 transition-all">
                     <CardItens items={arrayChecked} />
                 </div>
             )
