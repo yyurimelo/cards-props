@@ -1,4 +1,4 @@
-import Cards from "./site";
+import Cards from "./web";
 
 
 export default function Home() {
@@ -8,7 +8,6 @@ export default function Home() {
         <h1 className="text-6xl font-bold">choose your application</h1>
         <p className="text-3xl">free access, good otimization</p>
       </div>
-
 
       <Cards />
 
