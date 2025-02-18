@@ -1,5 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import {
     Card,
@@ -20,6 +21,12 @@ type Props = {
 
 export function CardItens({ items }: Props) {
     const contador = items.length;
+    const router = useRouter();
+
+    async function handleNext(){
+        localStorage.setItem('selectedApps', JSON.stringify(items));
+        router.push("/form-next-step");
+    }
 
     return (
         <Card className="w-[350px] shadow-md">
@@ -33,7 +40,7 @@ export function CardItens({ items }: Props) {
                         <span>{item.nome}</span>
                     </div>
                 ))}
-                <Button className="w-full flex justify-between">
+                <Button className="w-full flex justify-between" onClick={handleNext}>
                     Next
                     <ChevronRight size={24} />
                 </Button>
